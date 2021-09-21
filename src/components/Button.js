@@ -1,6 +1,6 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
-function Button({ label, backgroundColor = "red", size = "md", handleClick }) {
+function Button({ label, backgroundColor = "red", size = "md", onClick }) {
     let scale = 1
     if (size === "sm") scale = 0.75
     if (size === "lg") scale = 1.5
@@ -10,7 +10,7 @@ function Button({ label, backgroundColor = "red", size = "md", handleClick }) {
         border: "none",
     }
     return (
-        <button onClick={handleClick} style={style}>
+        <button onClick={onClick} style={style}>
             {label}
         </button>
     )
@@ -20,7 +20,7 @@ Button.propTypes = {
     label: PropTypes.string,
     backgroundColor: PropTypes.string,
     size: PropTypes.oneOf(["sm", "md", "lg"]),
-    handleClick: PropTypes.func,
+    onClick: PropTypes.func,
 }
 
-export default Button
+export default Button;
