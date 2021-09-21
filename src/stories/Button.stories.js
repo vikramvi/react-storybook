@@ -2,7 +2,8 @@ import Button from "../components/Button";
 
 export default {
     title: "Button",
-    component: Button
+    component: Button,
+    argTypes: { handleClick: { action: "handleClick" } }
 }
 
 const Template = args => <Button {...args} />
